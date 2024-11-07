@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TypeData</title>
+  </head>
+  <body>
+    <p id="lgth"></p>
+    <p id="ln"></p>
+    <p id="demo"></p>
+    <script>
+      let length = 16;
+      let lastName = "Johnson";
+
+      document.getElementById("lgth").innerHTML = typeof length;
+      document.getElementById("ln").innerHTML = typeof lastName;
+
+      const x = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+      document.getElementById("demo").innerHTML = typeof x;
+    </script>
+  </body>
+</html>

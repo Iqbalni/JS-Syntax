@@ -1,13 +1,12 @@
 /// <reference types="cypress" />
 describe("Browser Actions", () => {
   it("should visit the SauceDemo site and perform an action", () => {
-    cy.visit("https://www.saucedemo.com/");
+    cy.visit("https://www.saucedemo.com/", { timeout: 60000 });
     cy.fixture("user").then((user) => {
       const username = user.username;
       const password = user.password;
       // Memasukkan username dan password
-      cy.get("input[data-test='username']").type(username);
-      cy.get("input[data-test='password']").type(password);
+      cy.login(username, password)
       cy.get("input[name='login-button']").click();
 
       //melihat logo product
